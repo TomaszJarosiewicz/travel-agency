@@ -21,6 +21,7 @@ export const searchDuration = payload => ({ payload, type: CHANGE_DURATION });
 
 // reducer
 export default function reducer(statePart = [], action = {}) {
+  console.log(action.payload);
   switch (action.type) {
     case CHANGE_PHRASE:
       return {
@@ -36,7 +37,10 @@ export default function reducer(statePart = [], action = {}) {
     case CHANGE_DURATION:
       return {
         ...statePart,
-        duration: action.payload,
+        duration: {
+          ...statePart.duration,
+          [action.payload.type] : parseInt(action.payload.value),
+        }
       };
     default:
       return statePart;

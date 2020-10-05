@@ -49,9 +49,9 @@ class App extends React.Component {
             >
               <Route exact path='/' component={Home} />
               <Route exact path='/trips' component={Trips} />
-              <Route exact path='/trip/id' component={Trip} />
+              <Route exact path='/trip/:id' component={Trip} />
               <Route exact path='/countries' component={Countries} />
-              <Route exact path='/country/id' component={Country} />
+              <Route exact path='/country/:id' component={Country} />
               <Route exact path='/regions' component={Regions} />
               <Route exact path='/info' component={Info} />
               <Route path='*' component={NotFound} />

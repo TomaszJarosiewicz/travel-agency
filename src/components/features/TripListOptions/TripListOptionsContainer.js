@@ -13,7 +13,7 @@ const mapDispatchToProps = dispatch => ({
   // TODO - add more dispatchers for other filters
   addFilterTags: tags => dispatch(addFilterTags(tags)),
   removeFilterTags: tags => dispatch(removeFilterTags(tags)),
-  searchDuration: duration => dispatch(searchDuration(duration)),
+  searchDuration: duration => dispatch(searchDuration(duration))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(TripListOptions);

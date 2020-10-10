@@ -42,7 +42,7 @@ class App extends React.Component {
         <MainLayout>
           <AnimatedSwitch
             atEnter={{ opacity: 0 }}
-            atLeave={{ opacity: 0 }}
+            atLeave={{ opacity: 1 }}
             atActive={{ opacity: 1 }}
             className={styles.switchWrapper}
             location={location}
